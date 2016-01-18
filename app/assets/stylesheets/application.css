@@ -11,5 +11,8 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require bxslider
+ *= require jquery-ui
+ *= require jquery.modal
  *= require_self
  */

@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bxslider
+//= require jquery-ui
+//= require jquery.modal
 //= require_tree .
