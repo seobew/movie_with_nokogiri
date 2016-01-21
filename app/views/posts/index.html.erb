@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h4>Listing Posts</h4>
+
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.user.name %></td>
+        <td><%= post.title %></td>
+        <td><%= post.author %></td>
+        <td><%= post.content %></td>
+				<% if current_user==post.user%>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<% else %>
+				<td colspan="3">권한이 없습니다. </td>
+			<% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="btnright" >
+<%= link_to 'New Post', new_post_path, :class => "btn btn-success"%>
+</div>

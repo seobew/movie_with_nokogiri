@@ -1,15 +1,19 @@
-<div class="bxslider">
+<!--<div class="bxslider">
 	<div class="slide"><img src="http://cfile10.uf.tistory.com/image/221F973652C57D4928557B" title="first moon"/></div>
 	<div class="slide"><img src="http://img.tenasia.hankyung.com/webwp_kr/wp-content/uploads/2013/12/2013123122004016776.jpg" title="second moon"/></div>
 	<div class="slide"><img src="http://cfile28.uf.tistory.com/image/237EE53652C57D50387D88" title="third moon"/></div>
 	<div class="slide"><img src="http://cfile7.uf.tistory.com/image/155AD3344F19330336504B" title="fouth moon"/></div>
-</div>
+</div>-->
 
-<div id="demo-form" class="demo-description" style="display: none; ">
-	<p>
-	The basic dialog window is an overlay positioned within the viewport and is protected from page content
-	(like select elements) shining through with an iframe. It has a title bar and a content area, and can be moved,
-	resized and closed with the 'x' icon by default.
-	</p>
-</div>
-<%=  link_to_modal "Demo Form", "#demo-form", :class=>"button" %>
+<section class="main_image">
+<ul class="bxslider">
+		<li style="background-image: url('http://cfile10.uf.tistory.com/image/221F973652C57D4928557B');" title="first moon"/></li>
+		<li style="background-image: url('http://img.tenasia.hankyung.com/webwp_kr/wp-content/uploads/2013/12/2013123122004016776.jpg');" title="second moon"/></li>
+		<li style="background-image: url('http://cfile28.uf.tistory.com/image/237EE53652C57D50387D88');" title="third moon"/></li>
+		<li style="background-image: url('http://cfile7.uf.tistory.com/image/155AD3344F19330336504B');" title="fouth moon"/></li>
+	</ul>
+</section>
+
+<form>
+	<input type="text" value="hello" onchange="bgcolor_yellow(this)" />
+</form>

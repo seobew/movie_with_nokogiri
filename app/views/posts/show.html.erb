@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+			<th colspan="2"><%= @post.title%></th>
+      <th>User</th>
+			<th colspan="2"><%= @post.user.name%></th>
+    </tr>
+  </thead>
+  <tbody>
+		<tr>
+			<td>내용</td>
+			<td colspan="5" ><%= @post.content %></td>
+		</tr>
+		<%= @comments.each do |comment| %>
+		<tr>
+			<td>-></td>
+			<td colspan="5"><%= comment.user.name %> : <%= comment.content %></td>
+		</tr>
+		<% end %>
+		<tr>
+			<td>코멘트</td>
+			<%= form_for([@post, @comment]) do |c| %>
+				<td colspan="4"><%= c.text_field :content %></td>
+				<td><%= c.submit%> </td>
+		<% end %>
+		</tr>
+  </tbody>
+</table>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

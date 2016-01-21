@@ -28,6 +28,7 @@ gem 'bxslider-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
 
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

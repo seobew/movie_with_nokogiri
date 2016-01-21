@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {sign_up:"users/registrations"}
 	root 'home#index'
   get 'home/index'
+	post 'post/comment_create'
+
+	resources :posts do
+		resources :comments
+	end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -38,8 +44,7 @@ Rails.application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  #     #     resources :sales do
   #       get 'recent', on: :collection
   #     end
   #   end

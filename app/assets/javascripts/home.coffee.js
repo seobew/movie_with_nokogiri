@@ -1,11 +1,12 @@
-$(document).ready(function(){
+$(document).on('ready page:load', function(){
 	  $('.bxslider').bxSlider({
-			auto: true,
-			autoControls: true,
-			adaptiveHeight: true,
-			mode: 'fade',
-			captions: true,
-			slideWidth: 300
+			pager: false,
+		//	auto: true,
+		//	autoControls: true,
+		//	adaptiveHeight: true,
+		//	mode: 'fade',
+			captions: true
+		//	slideWidth: 600
 		//	minSlides: 2,
 		//	maxSlides: 3,
 		//	moveSlides: 1,
@@ -13,3 +14,7 @@ $(document).ready(function(){
 		});
 		$('.dialog').dialog();
 });
+
+function bgcolor_yellow(obj){
+	obj.style.backgroundColor = 'yellow';
+}

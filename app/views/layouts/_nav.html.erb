@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/"><img src="http://static1.squarespace.com/static/551d64a8e4b0eeef9d4c5e6e/t/551d7c50e4b0b4693e0b11c0/1434141915347/?format=1500w" width="25"></a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li><a href="#">문화행사 <span class="sr-only">(current)</span></a></li>
+			<li><%= link_to '게시판', posts_path %></li>
+			<li><a href="#">익명 게시판</a></li>
+			<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">One more separated link</a></li>
+			</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href=".bs-example-modal-lg" data-toggle="modal">Conatct us</a></li>
+				<% if user_signed_in? %>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name%><span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><%= link_to 'Edit', edit_user_registration_path %> </li>
+					<li role="separator" class="divider"></li>
+					<li><%= link_to 'Log out', destroy_user_session_path, method: 'delete' %> </li>
+				</ul>
+			</li>
+			<% else %>
+				<li><a href="/users/sign_in"> Login </a></li>
+			<% end %>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			This is modal
+		</div>
+	</div>
+</div>
