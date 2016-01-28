@@ -3,8 +3,10 @@
 	padding: 0px;
 }
 body, html{
+	font-size:11px;
 	height: 100%;
 }
+/*
 .bx-viewport, .bx-wrapper{
 	position:relative;
 	width:100%;
@@ -18,7 +20,6 @@ body, html{
 .bxslider li{
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover;
 	}
 		.bx-wrapper .bx-viewport{
 		border: none !important;
@@ -28,6 +29,7 @@ body, html{
 	width: 100%;
 	height: 100%;
 }
+*/
 
 .footer{
 	clear: both;
@@ -36,3 +38,100 @@ body, html{
 	color:white;
 	text-align:center;
 }
+
+/// swiper css
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	.swiper-wrapper{
+		position: fixed;
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			width: 80%;
+			height: 80%;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			&.first{
+				background-image: url("http://blogs-images.forbes.com/markhughes/files/2015/06/INSIDE-OUT-8-1940x1092.jpg");
+			}
+			&.second{
+				background-image: url("https://cdn0.vox-cdn.com/thumbor/BgE1bYO3lmMGiUBma0LSknYvYc8=/0x0:671x377/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/42240486/Wall-E-Portable.0.0.jpg");
+			}
+			&.third{
+				background-image: url("http://www.gannett-cdn.com/-mm-/04b495208de2d7382ead00d3ae1d4690a9093e54/c=416-0-3791-1907&r=x1683&c=3200x1680/local/-/media/2015/02/04/USATODAY/USATODAY/635586375138407465-d02-up-oscar-best-pic-nom-dcov-03.jpg");
+			}
+			&.fourth{
+				background-image: url("http://cfile25.uf.tistory.com/image/202F213B4E7BD65A05A3C9");
+			}
+			&.fifth{
+				background-image: url("http://koreanz.com.au/wp-content/uploads/kboard_attached/222/201508/201508210240371420104.jpg");
+			}
+			.movie_wrapper{
+				background:rgba(0, 0, 255, 0.38);
+				padding: 1%;
+				width: 50%;
+				color: white;
+				dt{
+					font-size: 0.8em;
+				}
+				dd{
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}
+
+// 여기부터 아래쪽 부분
+.recommend-wrapper{
+	.sections-wrapper{
+		li{
+			padding: 5%;
+		}
+		#boxoffice-section{
+			.swiper-container2 {
+				width: 100%;
+				height: 100%;
+				.swiper-wrapper2{
+					position: fixed;
+					.swiper-slide {
+						text-align: center;
+						font-size: 18px;
+						background: #fff;
+						/* Center slide text vertically */
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						-webkit-box-pack: center;
+						-ms-flex-pack: center;
+						-webkit-justify-content: center;
+						justify-content: center;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						-webkit-align-items: center;
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+}
+

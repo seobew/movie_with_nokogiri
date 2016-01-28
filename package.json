@@ -1,0 +1,19 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": " ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dltjq0730/slider#readme"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "slider",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "ISEOB KIM <dltjq0730@unist.ac.kr>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,20 +1,41 @@
 $(document).on('ready page:load', function(){
-	  $('.bxslider').bxSlider({
-			pager: false,
-		//	auto: true,
-		//	autoControls: true,
-		//	adaptiveHeight: true,
-		//	mode: 'fade',
-			captions: true
-		//	slideWidth: 600
-		//	minSlides: 2,
-		//	maxSlides: 3,
-		//	moveSlides: 1,
-		//	slideMargin: 10,
-		});
 		$('.dialog').dialog();
 });
 
-function bgcolor_yellow(obj){
-	obj.style.backgroundColor = 'yellow';
-}
+$(document).ready(function () {
+	//initialize swiper when document ready
+	var mySwiper = new Swiper ('.swiper-container', {
+		/*
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			spaceBetween: 30,
+			loop: true,
+			effect: 'fade',
+			autoplay: 2500,
+			autoplayDisableOnInteraction: false
+			*/
+		pagination: '.swiper-pagination',
+			effect: 'coverflow',
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			loop: true,
+			coverflow: {
+				rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows : true
+			}
+	});
+	var mySwiper2 = new Swiper ('.swiper-container2', {
+		pagination: '.swiper-pagination',
+			slidesPerView: 3,
+			slidesPerColumn: 2,
+			paginationClickable: true,
+			spaceBetween: 30,
+			loop: true
+	});
+});

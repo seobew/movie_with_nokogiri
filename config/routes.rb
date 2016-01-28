@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :movieposts
   devise_for :users, controllers: {sign_up:"users/registrations"}
 	root 'home#index'
   get 'home/index'

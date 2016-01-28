@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @moviepost.content %>
+</p>
+
+<%= link_to 'Edit', edit_moviepost_path(@moviepost) %> |
+<%= link_to 'Back', movieposts_path %>
