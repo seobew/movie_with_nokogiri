@@ -23,10 +23,14 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'bxslider-rails'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'mini_magick'
 
 gem 'jquery-ui-rails'
 gem 'jquery-modal-rails'
+
+gem 'lazy_high_charts'
 
 gem 'devise'
 # Use ActiveModel has_secure_password

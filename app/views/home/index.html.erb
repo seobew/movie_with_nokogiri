@@ -74,84 +74,41 @@
 			<h3> Box Office </h3>	
 			<div class="swiper-container2">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						Slide 1
-					</div>
-					<div class="swiper-slide">
-						slide 2
-					</div>
-					<div class="swiper-slide">
-						slide 3
-					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide narrow">
 						현재 상영 순위 <br><br>
 						<% for i in 0..9 %>
 							<%= i+1%>.
 							<%= @ranks[i] %><br>
 						<% end %>
 					</div>
-					<div class="swiper-slide">
+					<div class="swiper-slide narrow">
+					<%# high_chart("some_id", @chart) %>
 					</div>
-						<% for s in 0..9%>
+						<% for s in 0..@length%>
 					<div class="swiper-slide">
 						<img src="<%= @movies[s] %>">
-						<h3><%= @alt_tags[s] %></h3>
+						<h4><%= @alt_tags[s] %></h4>
 					</div>
 				<% end %>
-					<!--
-					<div class="swiper-slide">
-					</div>
-					<div class="swiper-slide">
-						slide7
-					</div>
-					<div class="swiper-slide">
-						slide8
-					</div>
-					<div class="swiper-slide">
-						<img src="<%= @movies %>">
-					</div>
-					<div class="swiper-slide">
-						<img src="<%= @movies %>">
-					</div>
-					<div class="swiper-slide">
-						<img src="<%= @movies %>">
-					</div>
-					<div class="swiper-slide">
-						<img src="<%= @movies %>">
-					</div>
-					-->
 				</div>
 			</div>
 		</li>
 
 		<li>
 			<h3>나만 아는 숨겨진 명작 </h3>	
-			<div class="swiper-container2">
+			<div class="swiper-container3">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						slide1
+						<h3><%= current_user.name %></h3>
+						님이 보신 영화들입니다.
 					</div>
+					<% @moviepost.each do |post| %>
 					<div class="swiper-slide">
-						slide2
+						<%= image_tag post.movieimage, :class => "movieimg" %><br>
+						<%= post.title %><br>
+						<%= post.content %>
 					</div>
-					<div class="swiper-slide">
-						slide3
-					</div>
-					<div class="swiper-slide">
-						slide4
-					</div>
-					<div class="swiper-slide">
-						slide5
-					</div>
-					<div class="swiper-slide">
-						slide6
-					</div>
-					<div class="swiper-slide">
-						slide7
-					</div>
-					<div class="swiper-slide">
-						slide8
-					</div>
+				<% end %>
 				</div>
 			</div>
 		</li>
@@ -159,9 +116,7 @@
 </div>
 <br><br>
 
-<br>
+					<%= high_chart("some_id", @chart3) %>
 
+<%= link_to "영화 등록하기", new_moviepost_path %>
 
-<%# @movies.each do |x| %>
-	<%# x %>
-<%# end %>

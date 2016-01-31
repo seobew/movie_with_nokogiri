@@ -1,1 +1,1 @@
-json.extract! @moviepost, :id, :content, :created_at, :updated_at
+json.extract! @moviepost, :id, :img, :title, :content, :created_at, :updated_at

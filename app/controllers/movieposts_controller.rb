@@ -28,7 +28,8 @@ class MoviepostsController < ApplicationController
 
     respond_to do |format|
       if @moviepost.save
-        format.html { redirect_to @moviepost, notice: 'Moviepost was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Moviepost was successfully created.' }
+   #     format.html { redirect_to @moviepost, notice: 'Moviepost was successfully created.' }
         format.json { render :show, status: :created, location: @moviepost }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class MoviepostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def moviepost_params
-      params.require(:moviepost).permit(:content)
+      params.require(:moviepost).permit(:movieimage, :title, :content)
     end
 end

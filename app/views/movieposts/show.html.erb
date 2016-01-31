@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Img:</strong>
+  <%= image_tag @moviepost.movieimage %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @moviepost.title %>
+</p>
+
+<p>
   <strong>Content:</strong>
   <%= @moviepost.content %>
 </p>
