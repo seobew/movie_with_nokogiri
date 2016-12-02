@@ -13,7 +13,8 @@ class HomeController < ApplicationController
 		@graphdata_array = @graphdata.map{|n| n.to_i}
 		@weekenddate = doc.search('div.tab_type_6.tab_type_none p').text
 		# get images
-		url2 = "http://movie.naver.com/movie/running/current.nhn"
+		#url2 = "http://movie.naver.com/movie/running/current.nhn"
+		url2 = "http://movie.naver.com/movie/running/current.nhn?view=list&tab=normal&order=reserve"
 #		url2 = "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ie=utf8&query=%EC%98%81%ED%99%94"
 		doc2 = Nokogiri::HTML(open(url2))
 		@alt_tags = Array.new
